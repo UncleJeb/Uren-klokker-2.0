@@ -150,12 +150,46 @@ nav {
     font-size: 25px;
 }
 
+
+.fa-user:hover {
+    transition: all .8s;
+    color: #3decff;
+}
+
+.fa-envelope:hover {
+    transition: all .8s;
+    color: #D44638;
+} 
+
+.fa-cog:hover {
+    color: grey;
+    transition: all .5s;
+    -webkit-animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 .fa-power-off:hover {
+    transition: all .8s;
     color: #ff0000;
 }
+
+
 /* HEADER */
 
-#login-main {
+#login-main,
+#register-main {
     width: 100vw;
     height: 100vh;
     background: rgb(108,194,245);
@@ -165,11 +199,12 @@ nav {
     position: absolute;
 }
 
-#login-container {
+#login-container,
+#register-container2 {
     position: relative;
     background-color: #fff;
     width: 50%;
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
     left: 25%;
@@ -180,7 +215,8 @@ nav {
     box-shadow: 7px 7px rgba(0, 0, 0, 0.3);
 }
 
-#login-inner {
+#login-inner,
+#register-inner {
     margin-top: 5%;
 }
 
@@ -195,37 +231,59 @@ label {
 
 input {
     border-radius: 0 !important;
-    border: 0px !important;
+    border: 0 !important;
     border-bottom: 1px solid #3decff !important;
     width: 280px !important;
 }
 
 input:focus {
     transition: all .5s;
-    border: 1px solid #000 !important;
+    border: 1px solid #3decff !important;
 }
 
 button {
     font-size: 15px;
     width: 150px;
     height: 40px;
+    background-color: #3decff;
+    border: 0;
+    color: #fff;
+}
+
+button:hover {
+    transition: all 1s;
+    border: 1px solid #3decff;
+    background-color: #fff;
+    color: #000;
 }
 
 .form-input {
     
 }
 
-#register-text {
+#register-text,
+#login-text {
     font-size: 17px;
 }
 
-#register-link {
+#register-link,
+#login-link {
     text-decoration: none;
     color: #3decff;
 }
 
-#register-link:hover {
+#register-link:hover,
+#login-link:hover {
     transition: all 1s;
     color: #000;
+}
+
+#rememberme-container {
+    display: flex;
+}
+#rememberme {
+    float: left;
+    width: 50px !important;
+    margin-top: 10px;
 }
 

@@ -44,7 +44,7 @@
                 <a href=""><i class="fas fa-cog social-icons"></i></a>
             </div>
             <div class="setting" id="logout">
-                <a href=""><i class="fas fa-power-off social-icons"></i></a>
+                <a href="logout.php"><i class="fas fa-power-off social-icons"></i></a>
             </div>
         </div>
     </header>
