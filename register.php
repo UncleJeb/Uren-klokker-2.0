@@ -64,7 +64,7 @@
         }
         else
         {
-            $email = trim($_POST["password"]);
+            $email = trim($_POST["email"]);
         }
 
 
@@ -127,18 +127,15 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="">Username</label>
-                    <input type="text" name="username" id="username" class="form-input">
-                    <span><?php echo $usernameErr ?? null ?></span>
+                    <input type="text" placeholder="<?php echo $usernameErr; ?>" name="username" id="username" class="form-input">
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" name="email" id="email">
-                    <span><?php echo $emailErr ?? null ?></span>
+                    <input type="text" placeholder="<?php echo $emailErr; ?>" name="email" id="email">
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="password" name="password" id="password" class="form-input">
-                    <span><?php $passwordErr ?? null ?></span>
+                    <input type="password" placeholder="<?php echo $passwordErr; ?>" name="password" id="password" class="form-input">
                 </div>
                 <button type="submit">Submit</button>
                 <span><?php echo $LoginErr ?? null ?></span>

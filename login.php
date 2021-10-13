@@ -19,13 +19,11 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="">Username</label>
-                    <input type="text" name="username" id="username" class="form-input">
-                    <span><?php echo $usernameErr ?></span>
+                    <input type="text" placeholder="<?php echo $usernameErr; ?>" name="username" id="username" class="form-input">
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="password" name="password" id="password" class="form-input">
-                    <span><?php $passwordErr?></span>
+                    <input type="password" placeholder="<?php echo $passwordErr; ?>" name="password" id="password" class="form-input">
                 </div>
                 <div class="form-group" id="rememberme-container">
                 <label id="rememberme-label" for="">Remember Me</label>
@@ -36,6 +34,9 @@
             </form>
             <div id="register-container">
                 <p id="register-text">Don't have an account? <a href="register.php" id="register-link">Register here</a>.</p>
+            </div>
+            <div id="forgot-container2">
+                <p id="forgot-text">Forgot your password? <a href="forgot.php" id="forgot-link">Click here</a>.</p>
             </div>
         </div>
     </div>

@@ -22,13 +22,19 @@
                         <a href="" id="home-link" class="nav-link"><i class="fas fa-home nav-icon"></i>Home</a>
                     </li>
                     <li class="nav-item">
+                        <a href="" class="nav-link" id="project-link"><i class="fas fa-code nav-icon"></i>Projects</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="" id="chart-link" class="nav-link"><i class="fas fa-chart-pie nav-icon"></i>Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" id="Calender-link" class="nav-link"><i class="far fa-calendar-alt nav-icon"></i>Calender</a>
                     </li>
                     <li class="nav-item">
                         <a href="" id="excel-link" class="nav-link"><i class="fas fa-file-excel nav-icon"></i>Export</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link"></a>
+                        <a href="" id="editor-link" class="nav-link"><i class="fas fa-edit nav-icon"></i>Text Editor</a>
                     </li>
                 </ul>
             </div>

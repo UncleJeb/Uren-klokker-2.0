@@ -32,6 +32,9 @@
     --sidebar-width: 300px;
 }
 
+::placeholder {
+    color: #ff0000;
+}
 /* HEADER */
 header {
     position: fixed;
@@ -40,6 +43,10 @@ header {
     height: 100vh;
     width: var(--sidebar-width);
     background-color: #1c1c1c;
+}
+
+main {
+    margin-left: var(--sidebar-width);
 }
 
 #title {
@@ -101,6 +108,10 @@ nav {
     color: #A80000;
 }
 
+#project-link:hover {
+    color: #6e5494 !important;
+}
+
 #chart-link:hover {
     color: #FFA500;
 }
@@ -109,12 +120,28 @@ nav {
     color: #1D6F42 !important;
 }
 
+#editor-link:hover {
+    color: #5c5c5c !important;
+}
+
+.fa-edit {
+    color: #5c5c5c !important;
+}
+
 .fa-home {
     color: #A80000 !important;
 }
 
+.fa-code {
+    color: #6e5494 !important;
+}
+
 .fa-chart-pie {
     color: #FFA500 !important;
+}
+
+.fa-calendar-alt {
+    color: #0a58ca !important;
 }
 
 .fa-file-excel {
@@ -189,7 +216,8 @@ nav {
 /* HEADER */
 
 #login-main,
-#register-main {
+#register-main,
+#forgot-main {
     width: 100vw;
     height: 100vh;
     background: rgb(108,194,245);
@@ -200,7 +228,8 @@ nav {
 }
 
 #login-container,
-#register-container2 {
+#register-container2,
+#forgot-container {
     position: relative;
     background-color: #fff;
     width: 50%;
@@ -216,7 +245,8 @@ nav {
 }
 
 #login-inner,
-#register-inner {
+#register-inner,
+#forgot-inner {
     margin-top: 5%;
 }
 
@@ -262,18 +292,23 @@ button:hover {
 }
 
 #register-text,
-#login-text {
+#login-text,
+#forgot-text {
     font-size: 17px;
 }
 
 #register-link,
-#login-link {
+#login-link,
+#forgot-link,
+#back-link {
     text-decoration: none;
     color: #3decff;
 }
 
 #register-link:hover,
-#login-link:hover {
+#login-link:hover,
+#forgot-link:hover,
+#back-link:hover {
     transition: all 1s;
     color: #000;
 }
