@@ -1,17 +1,35 @@
+<?php
+session_start();
+    if(!isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] != true ) 
+    {
+        header("Location: login.php");
+        exit;
+    }
+?>
 <header id="header">
         <div id="title">
             <h4 id="title-text">Uren klokker V2</h4>
         </div>
         <div id="user">
             <div id="user-foto">
-                <img src="assets/img/placeholder.svg" alt="placeholder-person">
+                <img src="../assets/img/placeholder.svg" alt="placeholder-person">
             </div>
             <div id="user-info">
                 <div id="user-name">
-                    <p>Test User</p>
+                    <p><?php echo $_SESSION['username']; ?></p>
                 </div>
                 <div id="user-status">
-                    <p>Online</p>
+                    <p>
+                        <?php
+                            if($_SESSION == true) {
+                                echo '<i class="fas fa-circle online"></i> Online';
+                            }
+                            else
+                            {
+                                echo 'false';
+                            }
+                        ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -22,7 +40,7 @@
                         <a href="" id="home-link" class="nav-link"><i class="fas fa-home nav-icon"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link" id="project-link"><i class="fas fa-code nav-icon"></i>Projects</a>
+                        <a href="projects/projects.php" class="nav-link" id="project-link"><i class="fas fa-code nav-icon"></i>Projects</a>
                     </li>
                     <li class="nav-item">
                         <a href="" id="chart-link" class="nav-link"><i class="fas fa-chart-pie nav-icon"></i>Statistics</a>
