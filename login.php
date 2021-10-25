@@ -7,8 +7,6 @@
     require 'assets/inc/header.php';
     require 'assets/inc/dbconnect.php';
     include 'assets/inc/loginscript.php';
-
-
 ?>
 <main id="login-main">
     <div id="login-container">
@@ -29,7 +27,7 @@
                 <label id="rememberme-label" for="">Remember Me</label>
                     <input type="checkbox" name="rememberme" id="rememberme">
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Login</button>
                 <span><?php echo $LoginErr?></span>
             </form>
             <div id="register-container">

@@ -1,4 +1,4 @@
-<table class="table table-dark">
+<table class="table table-custom">
                     <thead>
                     <tr>
                         <th scope="col">Id</th>

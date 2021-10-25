@@ -33,7 +33,7 @@
 }
 
 ::placeholder {
-    color: #ff0000;
+    color: rgba(255, 255, 255, .2);
 }
 /* HEADER */
 #header {
@@ -237,24 +237,26 @@ nav {
     top: 15%;
     right: 0;
     bottom: 0;
-    box-shadow: 7px 7px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     border-radius: 20px;
+    background: #1d1b32;
 }
 
 #login-main #login-container::before,
-#register-main #register-container2::before {
+#register-main #register-container2::before,
+#forgot-main #forgot-container::before {
     content: '';
     position: absolute;
     width: 25%;
-    height: 160%;
+    height: 200%;
     background: linear-gradient(#00ccff, #d400d4);
     animation: animate 4s linear infinite;
 
 }
 
 #login-main #login-container::after,
-#register-main #register-container2::after {
+#register-main #register-container2::after,
+#forgot-main #forgot-container::after {
     content: '';
     position: absolute;
     inset: 4px;
@@ -278,74 +280,85 @@ nav {
 #forgot-main #forgot-container #forgot-inner {
     margin-top: 5%;
     z-index: 1;
-}
-
-#login-main #login-container2 #login-inner #page-title #login-title {
     color: #fff;
 }
 
 
 #login-main #login-container #login-inner form,
-#register-main #register-container2 #register-inner form {
+#register-main #register-container2 #register-inner form,
+#forgot-main #forgot-container #forgot-inner form {
     margin-top: 15%;
 }
 
-#login-main #login-container #login-inner form .form-group label
-#register-main #register-container2 #register-inner form .form-group label {
+label {
     font-size: 20px;
     font-weight: 100 !important;
     color: #fff;
 }
 
-#login-main #login-container #login-inner form .form-group .form-input {
+#login-main #login-container #login-inner form .form-group .form-input,
+#register-main #register-container2 #register-inner form .form-group .form-input,
+#forgot-main #forgot-container #forgot-inner form .form-group .form-input {
     border-radius: 0 !important;
     border: 0 !important;
-    border-bottom: 1px solid #00ccff !important;
+    border-bottom: 1px solid #070c24 !important;
     width: 280px !important;
+    color: #fff;
+    background: #1d1b32;
 }
 
-#login-main #login-container #login-inner form .form-group .form-input:focus {
+#login-main #login-container #login-inner form .form-group .form-input:focus,
+#register-main #register-container2 #register-inner form .form-group .form-input:focus,
+#forgot-main #forgot-container #forgot-inner form .form-group .form-input:focus {
     transition: all .5s ease;
-    border: 1px solid #3decff !important;
+    border: 1px solid #1d1b32 !important;
 }
 
-#login-main #login-container #login-inner form button {
+#login-main #login-container #login-inner form button,
+#register-main #register-container2 #register-inner form button,
+#forgot-main #forgot-container #forgot-inner form button {
     font-size: 15px;
     width: 150px;
     height: 40px;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
+    color: #070c24;
+    background-color: #fff;
+}
+
+#login-main #login-container #login-inner form button:hover,
+#register-main #register-container2 #register-inner form button:hover,
+#forgot-main #forgot-container #forgot-inner form button:hover {
+    transition: all .8s ease;
+    border: 1px solid #1d1b32;
+    background-color: #070c24;
     color: #fff;
 }
 
-#login-main #login-container #login-inner form button:hover {
-    transition: all 1s;
-    border: 1px solid #3decff;
-    background-color: #fff;
-    color: #000;
-}
-
 #login-main #login-container #login-inner #register-container #register-text,
-#login-text,
+#register-main #register-container2 #register-inner #register-container #login-text,
 #login-main #login-container #login-inner #forgot-container2 #forgot-text {
     font-size: 17px;
     color: #fff;
 }
 
 #login-main #login-container #login-inner #register-container #register-link,
-#login-link,
+#register-main #register-container2 #register-inner #register-container #login-link,
 #login-main #login-container #login-inner #forgot-container2 #forgot-link,
-#back-link {
+#forgot-main #forgot-container #forgot-inner #back-container #back-link {
     text-decoration: none;
-    color: #3decff;
+    color: #fff;
 }
 
 #login-main #login-container #login-inner #register-container #register-link:hover,
-#login-link:hover,
+#register-main #register-container2 #register-inner #register-container #login-link:hover {
+    transition: all .4s ease;
+    color: #3decff;
+}
 #login-main #login-container #login-inner #forgot-container2 #forgot-link:hover,
-#back-link:hover {
-    transition: all 1s;
-    color: #fff;
+#forgot-main #forgot-container #forgot-inner #back-container #back-link:hover {
+    transition: all .4s ease;
+    color: #d400d4;
 }
 
 #rememberme-container {
@@ -358,19 +371,10 @@ nav {
 }
 
 #index-main {
-    margin-left: var(--sidebar-width);
+    background: #151324;
 }
-
-.online {
-    color: #5bfc58;
-}
-
 
 /* PROJECTS CSS */
-
-#projects-main {
-    margin-left: var(--sidebar-width);
-}
 
 #projects-main #projects-container {
     width: 100%;
@@ -392,106 +396,6 @@ nav {
 }
 
 #projects-main #projects-container #projects-inner .project-item .project-name {
-    text-align: center;
-}
-
-
-
-
-body {
-    position: relative ;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-
-.sidebar {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    width: 240px;
-    background: #11101d;
-    padding: 6px 14px;
-}
-
-
-.sidebar .logo-content .logo {
-    color: #fff;
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-}
-
-.logo-content .logo i {
-    font-size: 28px;
-    margin-right: 5px;
-}
-
-.logo-content .logo .logo_name {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.sidebar #btn {
-    position: absolute;
-    color: #fff;
-    left: 80%;
-    top: 6px;
-    font-size: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
-}
-
-.sidebar ul {
-    margin-top: 20px;
-}
-
-.sidebar ul li {
-    position: relative;
-    list-style: none;
-    height: 50px;
-    width: 100%;
-    margin: 0 5px;
-    line-height: 50px;
-}
-
-.sidebar ul li input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    outline: none;
-    border: none;
-    background: #1d1b32;
-    padding-left: 50px;
-    font-size: 18px;
-}
-
-.sidebar ul li a {
-    columns: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: all .4s ease;
-    border-radius: 12px;
-}
-
-.sidebar ul li a:hover {
-    background: #fff;
-    color: #11101d;
-}
-
-.sidebar ul li a i {
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px;
     text-align: center;
 }
 

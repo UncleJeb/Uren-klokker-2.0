@@ -46,12 +46,12 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" placeholder="<?php echo $emailErr; ?>" name="email" id="email">
+                    <input type="text" placeholder="<?php echo $emailErr; ?>" name="email" id="email" class="form-input">
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Forget</button>
             </form>
             <div id="back-container">
-                <p>Back to <a href="login.php" id="back-link">Login</a>.</p>
+                <p><a href="login.php" id="back-link">Back to Login</a>.</p>
             </div>
         </div>
     </div>

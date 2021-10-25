@@ -7,7 +7,7 @@
     include 'assets/inc/header.php'; 
     include 'assets/inc/nav-2.php'; 
 ?>
-<!--
+<script src="assets/js/main.js" async></script>
 <main id="index-main">
     <div id="top-container">
         <div id="urenklokker-container">
@@ -31,6 +31,6 @@
         </div>
     </div>
 </main>
--->
+
 <?php include 'assets/inc/footer.php'; ?>
 

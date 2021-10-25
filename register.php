@@ -131,17 +131,17 @@
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" placeholder="<?php echo $emailErr; ?>" name="email" id="email">
+                    <input type="text" placeholder="<?php echo $emailErr; ?>" name="email" id="email" class="form-input">
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
                     <input type="password" placeholder="<?php echo $passwordErr; ?>" name="password" id="password" class="form-input">
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Register</button>
                 <span><?php echo $LoginErr ?? null ?></span>
             </form>
             <div id="register-container">
-                <p id="login-text">Already have an account? Login <a href="login.php" id="login-link">here</a>.</p>
+                <p id="login-text">Already have an account? <a href="login.php" id="login-link">Login here</a>.</p>
             </div>
         </div>
     </div>
