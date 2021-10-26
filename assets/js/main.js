@@ -10,3 +10,13 @@ searchBtn.onclick = function() {
     sidebar.classList.toggle("active");
 }
 
+
+
+$('.button').click(function () {
+    $('.overlay').show();
+})
+$('.close').click(function () {
+    $('.overlay').hide();
+})
+
+var dataID = $('#button').data('data-id');

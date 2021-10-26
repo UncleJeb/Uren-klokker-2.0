@@ -43,6 +43,27 @@ session_start();
                 </a>
                 <span class="sidebar_tooltip">Charts</span>
             </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-calendar'></i>
+                    <span class="links_name">Calendar</span>
+                </a>
+                <span class="sidebar_tooltip">Calendar</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fas fa-file-excel"></i>
+                    <span class="links_name">export</span>
+                </a>
+                <span class="sidebar_tooltip">Export</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-edit-alt' ></i>
+                    <span class="links_name">Editor</span>
+                </a>
+                <span class="sidebar_tooltip">Editor</span>
+            </li>
         </ul>
         <div class="profile_content">
             <div class="profile">

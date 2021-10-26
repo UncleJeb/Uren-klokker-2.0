@@ -240,7 +240,7 @@ body {
 #index-main {
     position: absolute;
     height: 100%;
-    width: calc(100% - 79px);
+    width: calc(100% - 78px);
     left: 78px;
     transition: all .5s ease;
 }
