@@ -3,17 +3,18 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL); 
+    setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', 'WINDOWS-1252');
     include 'assets/inc/dbconnect.php'; 
     include 'assets/inc/header.php'; 
     include 'assets/inc/nav-2.php'; 
 ?>
-<script src="assets/js/main.js" async></script>
+
 <main id="index-main">
     <div class="row">
         <div id="top-container" class="container">
             <div id="urenklokker-container" >
                 <div id="urenklokker-inner" class="table-resposive-md">
-                    <?php include 'assets/inc/uren-klokker/list-uren-preview.php'; ?>
+                    <?php include 'assets/inc/uren-klokker/list-uren.php'; ?>
                 </div>
             </div>
         </div>
@@ -44,55 +45,5 @@
         </div>
     </div>
 </main>
-
-
-<div class='overlay'>
-    <div class='popup'>
-        <div class='close'>&#10006;</div>
-            <h2>Update</h2> 
-            <?php 
-                $id = $_GET["id"];
-
-                echo $id;
-                
-                $sql = "SELECT * FROM uren WHERE id=:id";
-                $params = array(":id" => $id);
-
-
-                    $sth = $db->prepare($sql);
-                    $sth->execute($params);
-                    $entry = $sth->fetch(PDO::FETCH_ASSOC);
-                
-                
-            ?>
-            <div class="form">
-                <form class="update-form" action="" method="post">
-                    <div class="form-group">
-                        <input type="hidden" value="<?php echo $entry["id"]?>" name="id"id="id">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Username</label><br>
-                        <input type="text" value="<?php echo $entry["username"] ?>" name="username" id="username" readonly>
-                    </div> 
-                    <div class="form-group">
-                        <label for="">Total aantal uren</label><br>
-                        <input type="text" value="<?php echo $entry["uren"]?>" name="uren" id="uren">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Datum</label><br>
-                        <input type="date" value="<?php echo $entry["datum"]?>" name="datum" id="datum">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Beschrijving</label><br>
-                        <input type="text" value="<?php echo $entry["beschrijving"]?>" name="beschrijving" id="beschrijving"> 
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="submit" class="btn btn-primary" name="submit"> 
-                    </div>
-                </form>
-            </div>
-    </div>
-</div>
-
 <?php include 'assets/inc/footer.php'; ?>
 

@@ -1,4 +1,3 @@
-
 input[type=text] {
     padding: 0px;
 }
@@ -7,7 +6,7 @@ body {
     position: relative ;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -237,7 +236,9 @@ body {
     border-radius: 12px;
 }
 
-#index-main {
+#index-main,
+.page-main {
+    background: #151324;
     position: absolute;
     height: 100%;
     width: calc(100% - 78px);
@@ -249,3 +250,79 @@ body {
     width: calc(100% - 240px);
     left: 240px;
 }
+
+.sidebar.active ~ .page-main {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+/* Icons */
+.fas, .fab {
+    color: #fff;
+}
+
+.bxs-home:hover {
+    color: #A80000;
+    transition: all .8s ease;
+}
+
+.fa-code:hover {
+    color: #6e5494;
+    transition: all .8s ease;
+}
+
+.bxs-edit-alt:hover {
+    color: #5c5c5c;
+    transition: all .8s ease;
+}
+
+.bxs-calendar:hover {
+    color: #3decff;
+    transition: all .8s ease;
+}
+
+.fa-file-excel:hover {
+    color: #1D6F42;
+    transition: all .8s ease;
+}
+
+
+.fa-chart-pie:hover {
+    color: #FFA500;
+    transition: all .8s ease;
+}
+
+.fa-user:hover {
+    transition: all .8s ease;
+    color: #3decff;
+}
+
+.fa-envelope:hover {
+    transition: all .8s ease;
+    color: #D44638;
+} 
+
+.fa-power-off:hover {
+    transition: all .8s ease;
+    color: #ff0000;
+}
+
+.fa-cog:hover {
+    color: grey;
+    transition: all .5s ease;
+    -webkit-animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+/* Icons */

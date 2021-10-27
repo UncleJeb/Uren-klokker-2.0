@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto.ttf');
-
-}
-
-@font-face {
-    font-family: 'RobotoMono';
-    src: url('../fonts/RobotoMono-VariableFont_wght.ttf');
-}
 
 @font-face {
     font-family: 'SpaceMono';
@@ -28,10 +18,6 @@
     font-family: 'SpaceMono';
 }
 
-:root {
-    --sidebar-width: 300px;
-}
-
 ::placeholder {
     color: rgba(255, 255, 255, .2);
 }
@@ -39,188 +25,15 @@
 body {
     overflow-y: scroll;
     color: #fff;
-}
-
-/* HEADER */
-#header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: var(--sidebar-width);
-    background-color: #1c1c1c;
+    background: #151324;
 }
 
 
-#title {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 20px 0;
-}
-
-#title-text {
-    color: #fff;
-}
-
-#user {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#user-info {
-    display: flex;
-    flex-direction: column;
-}
-
-#user-name {
-    color: #fff;
-}
-
-#user-status {
-    color: #fff;
-}
-
-nav {
-    margin-top: 6%;
-}
-
-#navigation {
-    text-align-last: center;
-}
-
-.nav-item {
-    text-align: right;
-    margin-right: 4%;
-}
-
-.nav-item a {
-    color: #fff;
-}
-
-.nav-link {
-    color: #000;
-    font-size: 23px;
-    font-weight: 300;
-}
-
-.nav-icon {
-    margin-right: 1rem;
-}
-
-#home-link:hover {
-    color: #A80000;
-}
-
-#project-link:hover {
-    color: #6e5494 !important;
-}
-
-#chart-link:hover {
-    color: #FFA500;
-}
-
-#excel-link:hover {
-    color: #1D6F42 !important;
-}
-
-#editor-link:hover {
-    color: #5c5c5c !important;
-}
-
-.fa-edit {
-    color: #5c5c5c !important;
-}
-
-.fa-home {
-    color: #A80000 !important;
-}
-
-.fa-code {
-    color: #6e5494 !important;
-}
-
-.fa-chart-pie {
-    color: #FFA500 !important;
-}
-
-.fa-calendar-alt {
-    color: #0a58ca !important;
-}
-
-.fa-file-excel {
-    color: #1D6F42 !important;
-}
-
-#social-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
-}
-
-.fas,
-.fab {
-    color: #fff;
-}
-
-#options-bar {
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
-    bottom: 0;
-    width: var(--sidebar-width);
-}
-
-.setting {
-    padding: 15px 15px 15px 15px;
-    margin: 5px 5px 5px 5px;
-}
-
-.social-icons {
-    font-size: 25px;
-}
-
-
-.fa-user:hover {
-    transition: all .8s;
-    color: #3decff;
-}
-
-.fa-envelope:hover {
-    transition: all .8s;
-    color: #D44638;
-} 
-
-.fa-cog:hover {
-    color: grey;
-    transition: all .5s;
-    -webkit-animation: spin 4s linear infinite;
-}
-
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
-}
-
-.fa-power-off:hover {
-    transition: all .8s;
-    color: #ff0000;
-}
-
-
-/* HEADER */
 
 #login-main,
 #register-main,
-#forgot-main {
+#forgot-main,
+.main {
     width: 100vw;
     height: 100vh;
     background: #070c24;
@@ -231,7 +44,8 @@ nav {
 
 #login-main #login-container,
 #register-main #register-container2,
-#forgot-main #forgot-container {
+#forgot-main #forgot-container,
+.main .main-container {
     position: relative;
     background-color: #fff;
     width: 50%;
@@ -250,7 +64,8 @@ nav {
 
 #login-main #login-container::before,
 #register-main #register-container2::before,
-#forgot-main #forgot-container::before {
+#forgot-main #forgot-container::before,
+.main .main-container::before {
     content: '';
     position: absolute;
     width: 25%;
@@ -262,7 +77,8 @@ nav {
 
 #login-main #login-container::after,
 #register-main #register-container2::after,
-#forgot-main #forgot-container::after {
+#forgot-main #forgot-container::after,
+.main .main-container::after {
     content: '';
     position: absolute;
     inset: 4px;
@@ -283,7 +99,8 @@ nav {
 
 #login-main #login-container #login-inner,
 #register-main #register-container2 #register-inner,
-#forgot-main #forgot-container #forgot-inner {
+#forgot-main #forgot-container #forgot-inner,
+.main .main-container .main-inner {
     margin-top: 5%;
     z-index: 1;
     color: #fff;
@@ -304,25 +121,30 @@ label {
 
 #login-main #login-container #login-inner form .form-group .form-input,
 #register-main #register-container2 #register-inner form .form-group .form-input,
-#forgot-main #forgot-container #forgot-inner form .form-group .form-input {
+#forgot-main #forgot-container #forgot-inner form .form-group .form-input,
+.main .main-container .main-inner form .form-group .form-input {
     border-radius: 0 !important;
     border: 0 !important;
     border-bottom: 1px solid #070c24 !important;
     width: 280px !important;
     color: #fff;
     background: #1d1b32;
+    padding-left: 10px;
 }
 
 #login-main #login-container #login-inner form .form-group .form-input:focus,
 #register-main #register-container2 #register-inner form .form-group .form-input:focus,
-#forgot-main #forgot-container #forgot-inner form .form-group .form-input:focus {
+#forgot-main #forgot-container #forgot-inner form .form-group .form-input:focus,
+.main .main-container .main-inner form .form-group .form-input:focus {
     transition: all .5s ease;
     border: 1px solid #1d1b32 !important;
+    padding-left: 10px;
 }
 
 #login-main #login-container #login-inner form button,
 #register-main #register-container2 #register-inner form button,
-#forgot-main #forgot-container #forgot-inner form button {
+#forgot-main #forgot-container #forgot-inner form button,
+.main .main-container .main-inner form button {
     font-size: 15px;
     width: 150px;
     height: 40px;
@@ -334,7 +156,8 @@ label {
 
 #login-main #login-container #login-inner form button:hover,
 #register-main #register-container2 #register-inner form button:hover,
-#forgot-main #forgot-container #forgot-inner form button:hover {
+#forgot-main #forgot-container #forgot-inner form button:hover,
+.main .main-container .main-inner form button:hover {
     transition: all .8s ease;
     border: 1px solid #1d1b32;
     background-color: #070c24;
@@ -343,7 +166,8 @@ label {
 
 #login-main #login-container #login-inner #register-container #register-text,
 #register-main #register-container2 #register-inner #register-container #login-text,
-#login-main #login-container #login-inner #forgot-container2 #forgot-text {
+#login-main #login-container #login-inner #forgot-container2 #forgot-text,
+.form-text {
     font-size: 17px;
     color: #fff;
 }
@@ -351,13 +175,16 @@ label {
 #login-main #login-container #login-inner #register-container #register-link,
 #register-main #register-container2 #register-inner #register-container #login-link,
 #login-main #login-container #login-inner #forgot-container2 #forgot-link,
-#forgot-main #forgot-container #forgot-inner #back-container #back-link {
+#forgot-main #forgot-container #forgot-inner #back-container #back-link,
+.form-links {
+    font-size: 17px;
     text-decoration: none;
     color: #fff;
 }
 
 #login-main #login-container #login-inner #register-container #register-link:hover,
-#register-main #register-container2 #register-inner #register-container #login-link:hover {
+#register-main #register-container2 #register-inner #register-container #login-link:hover,
+.form-links:hover {
     transition: all .4s ease;
     color: #3decff;
 }
@@ -374,10 +201,6 @@ label {
     float: left;
     width: 50px !important;
     margin-top: 10px;
-}
-
-#index-main {
-    background: #151324;
 }
 
 /* PROJECTS CSS */

@@ -23,11 +23,32 @@ session_start();
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="/job/Uren-klokker-2.0/index.php">
                     <i class='bx bxs-home' ></i>
                     <span class="links_name">Home</span>
                 </a>
                 <span class="sidebar_tooltip">Home</span>
+            </li>
+            <li>
+                <a href="/job/Uren-klokker-2.0/assets/inc/uren-klokker/list_uren.php">
+                    <i class='bx bxs-calendar'></i>
+                    <span class="links_name">Uren</span>
+                </a>
+                <span class="sidebar_tooltip">Uren</span>
+            </li>
+            <li>
+                <a href="/job/Uren-klokker-2.0/assets/inc/charts/charts.php">
+                    <i class="fas fa-chart-pie"></i>
+                    <span class="links_name">Charts</span>
+                </a>
+                <span class="sidebar_tooltip">Charts</span>
+            </li>
+            <li>
+                <a href="/job/Uremn-klokker-2.0/assets/inc/to-do-list/to-do.php">
+                    <i class='bx bx-task'></i>
+                    <span class="links_name">Tasks</span>
+                </a>
+                <span class="sidebar_tooltip">Tasks</span>
             </li>
             <li>
                 <a href="">
@@ -35,20 +56,6 @@ session_start();
                     <span class="links_name">Projects</span>
                 </a>
                 <span class="sidebar_tooltip">Projects</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class="fas fa-chart-pie"></i>
-                    <span class="links_name">Charts</span>
-                </a>
-                <span class="sidebar_tooltip">Charts</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bxs-calendar'></i>
-                    <span class="links_name">Calendar</span>
-                </a>
-                <span class="sidebar_tooltip">Calendar</span>
             </li>
             <li>
                 <a href="">
@@ -63,6 +70,13 @@ session_start();
                     <span class="links_name">Editor</span>
                 </a>
                 <span class="sidebar_tooltip">Editor</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fas fa-cog"></i>
+                    <span class="links_name">Settings</span>
+                </a>
+                <span class="sidebar_tooltip">Settings</span>
             </li>
         </ul>
         <div class="profile_content">

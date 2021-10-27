@@ -8,6 +8,7 @@
   .container {
       max-width: 1600px !important;
       margin: 0 auto;
+      padding-bottom: 40px;
   }
   
 }
@@ -22,6 +23,7 @@
   .container {
       max-width: 960px !important;
       margin: 0 auto;
+      padding-bottom: 40px;
   }
   
 }
@@ -36,6 +38,7 @@
   .container {
       max-width: 800px !important;
       margin: 0 auto;
+      padding-bottom: 40px;
   }
   
 }
@@ -50,6 +53,7 @@
   .container {
       max-width: 800px !important;
       margin: 0 auto;
+      padding-bottom: 20px;
   }
   
 }
@@ -64,6 +68,7 @@
   .container {
       max-width: 600px !important;
       margin: 0 auto;
+      padding-bottom: 20px;
   }
   
 }
