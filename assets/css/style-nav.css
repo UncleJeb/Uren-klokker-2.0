@@ -256,6 +256,17 @@ body {
     left: 240px;
 }
 
+#pfp_btn {
+    margin-bottom: 0;
+    width: 35px;
+    height: 45px;
+    margin-top: -3px;
+    display: flex;
+    place-content: center;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
 /* Icons */
 .fas, .fab {
     color: #fff;

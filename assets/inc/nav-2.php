@@ -5,6 +5,17 @@ session_start();
         header("Location: login.php");
         exit;
     }
+
+    $_username = $_SESSION["username"];
+    $pfp_sql = "SELECT pfpname FROM users WHERE username = '$_username'";
+    $pfp_stmt = $db->prepare($pfp_sql);
+    $pfp_stmt->execute();
+
+    $row = $pfp_stmt->fetch(PDO::FETCH_ASSOC);
+
+    $image = $row['pfpname']; 
+    $image_src = "/job/Uren-klokker-2.0/assets/upload/".$image;
+
 ?>
     <div class="sidebar">
         <div class="logo-content">
@@ -82,13 +93,14 @@ session_start();
         <div class="profile_content">
             <div class="profile">
                 <div class="profile_details">
-                    <img src="https://via.placeholder.com/150" alt="img">
+                    <button id="pfp_btn" class="button">
+                    <img src=" <?php echo $image_src ?>" alt="img"></button>
                     <div class="name_job">
                         <div class="name"><?php echo $_SESSION['username']; ?></div>
                         <div class="job"><?php echo $_SESSION['occupation'] ?? null; ?></div>
                     </div>
                 </div>
-                <a href="logout.php"><i id="logout" class="fas fa-power-off"></i></a>
+                <a href="/job/Uren-klokker-2.0/logout.php"><i id="logout" class="fas fa-power-off"></i></a>
             </div>
         </div>
     </div>

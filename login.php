@@ -9,7 +9,7 @@
     include 'assets/inc/loginscript.php';
 ?>
 <main id="login-main">
-    <div id="login-container">
+    <div id="login-container" class="container">
         <div id="login-inner">
             <div id="page-title">
                 <h3 id="login-title">Account Login</h3>

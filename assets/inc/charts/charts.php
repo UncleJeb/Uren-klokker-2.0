@@ -7,15 +7,29 @@
     include '../dbconnect.php'; 
     include '../header.php'; 
     include '../nav-2.php'; 
+
+    $_username = $_SESSION["username"];
+
+    $sqlsum = "SELECT SUM(uren) AS sumuren FROM uren WHERE username = '$_username'";
+    $stmtSum = $db->prepare($sqlsum);
+    $stmtSum->execute();
+    $rowsum = $stmtSum->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <main class="page-main">
-    <div class="row">
+    <div class="row first">
         <div class="container">
             <div class="six columns">
-                <?php include "../charts/charts-preview.php"; ?>
+                <?php include "../charts/pie_chart.php"; ?>
             </div>
-            <div class="six columns"></div>
+            <div class="six columns">
+                <?php include "../charts/line_chart.php"; ?>
+            </div>
         </div>
     </div>
 </main>
+<?php
+$path_footer = $_SERVER['DOCUMENT_ROOT'];
+$path_footer .= "/job/Uren-klokker-2.0/assets/inc/footer.php";
+include_once $path_footer; 
+?>

@@ -2,6 +2,7 @@
 .table-custom {
     background: #1d1b32;
     color: #fff;
+    font-size: 12px;
 }
 
 
@@ -66,8 +67,29 @@
     border-radius:10px 10px 0px 0px;
 }
 
-#select_link {}
+.table-custom tbody tr td a {
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    color: #070c24;
+    background-color: #fff;
+    line-height: 30px;
+    padding: 0;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
 
-.page-main {
-    background: #151324;
+.table-custom tbody tr td a:hover {
+    transition: all .8s ease;
+    border: 1px solid #1d1b32;
+    background-color: #070c24;
+    color: #fff;
+    line-height: 30px;
+    padding: 0;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
 }

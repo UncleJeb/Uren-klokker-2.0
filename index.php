@@ -1,5 +1,5 @@
 <?php
-    $title = "Index";
+    $title = "Overview";
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL); 
@@ -24,7 +24,7 @@
             <div class="six columns">
                 <div id="charts-container">
                     <div id="charts-inner">
-                        <?php include 'assets/inc/charts/charts-preview.php'; ?>
+                        <?php include 'assets/inc/charts/pie_chart.php'; ?>
                     </div>
                 </div>
             </div>
@@ -46,4 +46,5 @@
     </div>
 </main>
 <?php include 'assets/inc/footer.php'; ?>
+
 

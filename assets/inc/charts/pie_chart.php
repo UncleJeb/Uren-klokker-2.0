@@ -3,7 +3,7 @@
 <script>
     Chart.register(ChartDataLabels);
 var amount = <?php echo $rowsum["sumuren"] ?? null; ?>;
-var sumAmount = 640 - <?php echo $rowsum["sumuren"]; ?>;
+var sumAmount = 440 - <?php echo $rowsum["sumuren"]; ?>;
 
 var data = [{
     data: [amount , sumAmount],

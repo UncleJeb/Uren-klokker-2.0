@@ -3,7 +3,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    $title = "Login";
+    $title = "Register";
     require 'assets/inc/header.php';
     require 'assets/inc/dbconnect.php';
 
@@ -119,7 +119,7 @@
 
 ?>
 <main id="register-main">
-    <div id="register-container2">
+    <div id="register-container2" class="container">
         <div id="register-inner">
             <div id="page-title">
                 <h3 id="register-title">Account Register</h3>

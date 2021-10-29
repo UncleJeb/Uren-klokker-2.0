@@ -38,7 +38,7 @@
     
 ?>
 <main id="forgot-main">
-    <div id="forgot-container">
+    <div id="forgot-container" class="container">
         <div id="forgot-inner">
             <div id="page-title">
                 <h3 id="forgot-title">Forget password</h3>
