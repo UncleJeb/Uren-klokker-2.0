@@ -62,7 +62,7 @@ session_start();
                 <span class="sidebar_tooltip">Tasks</span>
             </li>
             <li>
-                <a href="">
+                <a href="/job/Uren-klokker-2.0/assets/inc/projects/projects.php">
                     <i class="fas fa-code"></i>
                     <span class="links_name">Projects</span>
                 </a>

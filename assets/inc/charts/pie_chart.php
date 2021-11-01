@@ -8,12 +8,12 @@ var sumAmount = 440 - <?php echo $rowsum["sumuren"]; ?>;
 var data = [{
     data: [amount , sumAmount],
     backgroundColor: [
-                    'rgba(17, 16, 29, 1)',
-                    'rgba(17, 16, 29, 1)',
+                    'rgba(44, 44, 44, 1)',
+                    'rgba(44, 44, 44, 1)',
                 ],
     borderColor: [
-        'rgba(0, 204, 255, 1)',
-        'rgba(212, 0, 212, 1)',
+        'rgba(228, 87, 5, 1)',
+        'rgba(170, 37, 0, 1)',
     ],
     borderWidth: 1,
 }];

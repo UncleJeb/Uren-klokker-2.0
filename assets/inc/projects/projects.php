@@ -3,14 +3,37 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL); 
-    include '../assets/inc/dbconnect.php'; 
-    include '../assets/inc/header.php'; 
-    include '../assets/inc/nav-2.php'; 
+    include '../dbconnect.php'; 
+    include '../header.php'; 
+    include '../nav-2.php'; 
 
     $sql = "SELECT * FROM projects";
     $sth = $db->prepare($sql);
     $sth->execute();
 ?>
+
+<main class="page-main">
+    <div class="container">
+        <div class="row">
+            <?php
+                while($row = $sth->fetch()) {
+            ?>
+            <div class="three columns">
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="card-title"><?php echo $row['project_name']; ?></h2>
+                        <p class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a href="#" class="btn button">Go To</a>
+                    </div>
+                </div>
+                <div class="six columns"></div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</main>
 <!--
     <main id="projects-main">
         <div id="title">
@@ -39,4 +62,4 @@
         </div>
     </main>  
                     -->  
-<?php include '../assets/inc/footer.php'; ?>
+<?php include '../footer.php'; ?>

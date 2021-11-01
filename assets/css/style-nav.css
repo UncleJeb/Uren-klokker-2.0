@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     width: 78px;
-    background: #11101d;
+    background: #212121;
     padding: 6px 14px;
     transition: all .5s ease;
 }
@@ -119,7 +119,7 @@ body {
     top: 0;
     outline: none;
     border: none;
-    background: #1d1b32;
+    background: #2c2c2c;
     padding-left: 50px;
     font-size: 18px;
     color: #fff;
@@ -186,7 +186,7 @@ body {
     position: relative;
     padding: 10px 6px;
     height: 60px;
-    background: #1d1b32;
+    background: #2c2c2c
 }
 
 .profile_content .profile .profile_details {
@@ -238,7 +238,7 @@ body {
 
 #index-main,
 .page-main {
-    background: #151324;
+    background: #121212;
     position: absolute;
     height: 100%;
     width: calc(100% - 78px);

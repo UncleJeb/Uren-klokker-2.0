@@ -18,7 +18,7 @@
 
 <main class="page-main">
     <div class="row first">
-        <div class="container">
+        <div class="container chart_spacer">
             <div class="six columns">
                 <?php include "../charts/pie_chart.php"; ?>
             </div>

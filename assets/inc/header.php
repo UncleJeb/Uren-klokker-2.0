@@ -23,6 +23,6 @@
     <script src="/job/Uren-klokker-2.0/assets/js/main.js" async></script>
 
     <title><?php echo $title ?></title>
-    <link rel="shortcut icon" type="image/gif" href="/job/Uren-klokker-2.0/assets/img/icons8-clock-24.png" />
+    <link rel="shortcut icon" type="image/gif" href="/job/Uren-klokker-2.0/assets/img/icons8-clock-24 (1).png" />
 </head>
 <body>

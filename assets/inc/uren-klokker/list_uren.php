@@ -11,7 +11,7 @@
 <main class="page-main">
     <div class="row">
         <div class="container">
-            <table class="table u-full-width table-custom">
+            <table class="table u-full-width table-custom table_spacer">
                 <thead>
                     <tr>
                         <th>Create</th>
