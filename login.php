@@ -4,8 +4,8 @@
     error_reporting(E_ALL);
 
     $title = "Login";
-    require 'assets/inc/header.php';
-    require 'assets/inc/dbconnect.php';
+    include 'assets/inc/dbconnect.php';
+    include 'assets/inc/header.php';
     include 'assets/inc/loginscript.php';
 ?>
 <main id="login-main">

@@ -9,10 +9,9 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
     if(isset($_SESSION['loggedIn']) && $_SESSION["loggedIn"] === false) {
         header("Location: login.php");
     }
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/job/Uren-klokker-2.0/assets/inc/header.php";
-	include_once $path; 
     include "../dbconnect.php";
+	include directoryCheck()."../header.php"; 
+
 
     $sql = "SELECT username FROM users";
     $sth = $db->prepare($sql);
@@ -52,7 +51,7 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
                     <span class="error"><?php echo $beschrijvingErr ?></span>
                 </div>
                 <button type="submit" name="submit">Create</button><br>
-                <p class="form-text"><a class="form-links" href="/job/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
+                <p class="form-text"><a class="form-links" href="<?php directoryCheck() ?>/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
             </form>
 
             <?php
@@ -73,7 +72,7 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
                             $params = array(":username" => $username, ":uren" => $uren, ":datum" => $datum, ":beschrijving" => $beschrijving);
                             $sth = $db->prepare($sql);
                             $sth->execute($params);  
-                            header("Location: /job/Uren-klokker-2.0/index.php");
+                            header("Location: ".directoryCheck()."/Uren-klokker-2.0/index.php");
                 }
                 
                 

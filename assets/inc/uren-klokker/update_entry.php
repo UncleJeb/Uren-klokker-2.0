@@ -3,10 +3,9 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $path .= "/job/Uren-klokker-2.0/assets/inc/header.php";
-	include_once $path; 
+    $title = "Update Entry";
     include "../dbconnect.php";
+	include directoryCheck()."../header.php"; 
 
 
     $id = empty($_GET["id"]) ?null : $_GET["id"];
@@ -50,7 +49,7 @@
                     <input type="text" value="<?php echo $entry["beschrijving"]?>" name="beschrijving" class="form-input"> 
                 </div>
                 <button type="submit" name="submit">Update</button>
-               <p class="form-text"><a class="form-links" href="/job/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
+               <p class="form-text"><a class="form-links" href="<?php directoryCheck() ?>/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
             </form>
             <?php 
                 if(isset($_POST["submit"])) {
@@ -67,7 +66,7 @@
                     $sth = $db->prepare($sql);
                     $sth->execute($params);
                 
-                    header("Location: /job/Uren-klokker-2.0/index.php");
+                    header("Location: ".directoryCheck()."/Uren-klokker-2.0/index.php");
                 }
             ?>
         </div>
