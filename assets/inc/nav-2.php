@@ -2,7 +2,7 @@
 session_start();
     if(!isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] != true ) 
     {
-        header("Location: login.php");
+        header("Location: assets/inc/user/login.php");
         exit;
     }
 
@@ -14,7 +14,7 @@ session_start();
     $row = $pfp_stmt->fetch(PDO::FETCH_ASSOC);
 
     $image = $row['pfpname']; 
-    $image_src = directoryCheck()."assets/upload/".$image;
+    $image_src = "job/Uren-klokker-2.0/assets//upload/".$image;
 
 ?>
     <div class="sidebar">
@@ -100,7 +100,7 @@ session_start();
                         <div class="job"><?php echo $_SESSION['occupation'] ?? null; ?></div>
                     </div>
                 </div>
-                <a href="<?php directoryCheck() ?>logout.php"><i id="logout" class="fas fa-power-off"></i></a>
+                <a href="<?php directoryCheck()?>/Uren-klokker-2.0/assets/inc/user/logout.php"><i id="logout" class="fas fa-power-off"></i></a>
             </div>
         </div>
     </div>

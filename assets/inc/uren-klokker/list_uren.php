@@ -4,7 +4,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL); 
     setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', 'WINDOWS-1252');
-    include '../dbconnect.php'; 
+    include '../db/dbconnect.php'; 
     include '../header.php'; 
     include '../nav-2.php'; 
 ?>
@@ -14,12 +14,12 @@
             <table class="table u-full-width table-custom table_spacer">
                 <thead>
                     <tr>
-                        <th>Create</th>
+                        <th colspan="6">Create</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a class="btn" href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/create_entry.php">Create</a></td>
+                        <td colspan="6"><a class="btn" href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/create_entry.php">Create</a></td>
                     </tr>
                 </tbody>
                 <thead>

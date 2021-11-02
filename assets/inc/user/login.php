@@ -4,9 +4,9 @@
     error_reporting(E_ALL);
 
     $title = "Login";
-    include 'assets/inc/dbconnect.php';
-    include 'assets/inc/header.php';
-    include 'assets/inc/loginscript.php';
+    include '../db/dbconnect.php';
+    include '../header.php';
+    include 'loginscript.php';
 ?>
 <main id="login-main">
     <div id="login-container" class="container">
@@ -31,15 +31,15 @@
                 <span><?php echo $LoginErr?></span>
             </form>
             <div id="register-container">
-                <p id="register-text">Don't have an account? <a href="register.php" id="register-link">Register here</a>.</p>
+                <p id="register-text">Don't have an account? <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/user/register.php" id="register-link">Register here</a>.</p>
             </div>
             <div id="forgot-container2">
-                <p id="forgot-text">Forgot your password? <a href="forgot.php" id="forgot-link">Click here</a>.</p>
+                <p id="forgot-text">Forgot your password? <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/user/forgot.php" id="forgot-link">Click here</a>.</p>
             </div>
         </div>
     </div>
 </main>
 <?php 
-    include 'assets/inc/footer.php';
+    include '../footer.php';
 ?>  
 

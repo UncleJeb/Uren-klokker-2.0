@@ -169,9 +169,11 @@ input:-webkit-autofill{
 #login-main #login-container #login-inner form button,
 #register-main #register-container2 #register-inner form button,
 #forgot-main #forgot-container #forgot-inner form button,
-.main .main-container .main-inner form button {
+.main .main-container .main-inner form button,
+.page-main .container .row .twelve button {
     font-size: 15px;
     width: 100px;
+    line-height: 30px;
     height: 40px;
     display: inline-block;
     cursor: pointer;
@@ -193,10 +195,20 @@ input:-webkit-autofill{
     
 }
 
+.page-main .container {
+    margin-top: 3%;
+}
+.page-main .container .row .twelve button {
+    line-height: 30px;
+    height: 40px;
+    width: 120px;
+}
+
 #login-main #login-container #login-inner form button::before,
 #register-main #register-container2 #register-inner form button::before,
 #forgot-main #forgot-container #forgot-inner form button::before,
-.main .main-container .main-inner form button::before {
+.main .main-container .main-inner form button::before,
+.page-main .container .row .twelve button::before {
     pointer-events: none;
     content: '';
     position: absolute;
@@ -216,7 +228,8 @@ input:-webkit-autofill{
 #login-main #login-container #login-inner form button::after,
 #register-main #register-container2 #register-inner form button::after,
 #forgot-main #forgot-container #forgot-inner form button::after,
-.main .main-container .main-inner form button::after {
+.main .main-container .main-inner form button::after,
+.page-main .container .row .twelve button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -236,20 +249,28 @@ input:-webkit-autofill{
 #register-main #register-container2 #register-inner form button:hover,
 #forgot-main #forgot-container #forgot-inner form button:hover,
 .main .main-container .main-inner form button:hover,
-.main .main-container .main-inner form button:focus {
+.main .main-container .main-inner form button:focus,
+.page-main .container .row .twelve button:hover,
+.page-main .container .row .twelve button:focus {
     background: #e46505;
     color: #212121;
     text-shadow: none;
 }
 
 #login-main #login-container #login-inner form button:hover::after,
-#login-main #login-container #login-inner form button:focus::after {
+#login-main #login-container #login-inner form button:focus::after,
+.page-main .container .row .twelve button:hover::after,
+.page-main .container .row .twelve button:focus::after
+{
     opacity: 1;
     transition: opacity 500ms ease;
 }
 
 #login-main #login-container #login-inner form button:hover::before,
-#login-main #login-container #login-inner form button:focus:before {
+#login-main #login-container #login-inner form button:focus:before,
+.page-main .container .row .twelve button:hover::before,
+.page-main .container .row .twelve button:focus::before
+{
     opacity: 1;
     transition: opacity 500ms ease;
 }
@@ -285,29 +306,6 @@ input:-webkit-autofill{
 
 /* PROJECTS CSS */
 
-#projects-main #projects-container {
-    width: 100%;
-}
-
-#projects-main #projects-container #projects-inner {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#projects-main #projects-container #projects-inner .project-item {
-    width: fit-content;
-    padding: 0px 20px 0px 20px;
-}
-#projects-main #projects-container #projects-inner .project-item .project-image {
-    width: fit-content;
-}
-
-#projects-main #projects-container #projects-inner .project-item .project-name {
-    text-align: center;
-}
-
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -332,7 +330,7 @@ input:-webkit-autofill{
     padding-top: 2%;
 }
 
-.overlay {
+.overlay, .overlay_project {
     position:fixed;
     display:none;
     top:0;
@@ -360,7 +358,7 @@ input:-webkit-autofill{
     left:20%;
     text-align:center;
     border-radius: 10px;
-    background:#151324;
+    background:#121212;
     box-shadow: 0px 0px 10px 0px black;
 }
 .popup .popup_title {
@@ -368,7 +366,7 @@ input:-webkit-autofill{
     height:50px;
     line-height:50px;
     color:#fff;
-    background:#1d1b32;
+    background:#212121;
     border-radius:10px 10px 0px 0px;
 }
 
@@ -380,12 +378,13 @@ input:-webkit-autofill{
 
 
 /* Project Cards */
+
+
 .card {
     color: #fff;
-    background-image: url(https://via.placeholder.com/500);
     background-size: cover;
-    padding: 18rem 0 0;
-    max-width: 35ch;
+    padding: 10rem 0 0;
+    max-width: 30ch;
     border: 0;
 
 
@@ -421,4 +420,16 @@ input:-webkit-autofill{
     height: 4px;
     width: calc(100% + var(--padding));
     background: #e46505;
+}
+
+#projects-main #projects-container #projects-row {
+    justify-content: center;
+}
+
+#projects-main #projects-container #projects-row .columns {
+    margin-top: 2%;
+}
+
+.btn-column {
+    text-align: center;
 }

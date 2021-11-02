@@ -5,7 +5,7 @@
 
             <form enctype="multipart/form-data" method="post">
                 <input type="file" name="pfp_file" class="form-input"><br>
-                <button type="submit" name="upload_btn">Upload Image</button>
+                <button class="btn" type="submit" name="upload_btn">Upload Image</button>
             </form>      
             <?php 
                 if(isset($_POST['upload_btn']))

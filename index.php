@@ -4,7 +4,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL); 
     setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', 'WINDOWS-1252');
-    include 'assets/inc/dbconnect.php'; 
+    include 'assets/inc/db/dbconnect.php'; 
     include 'assets/inc/header.php'; 
     include 'assets/inc/nav-2.php'; 
 ?>

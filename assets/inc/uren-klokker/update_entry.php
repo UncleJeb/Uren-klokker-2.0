@@ -4,8 +4,8 @@
     error_reporting(E_ALL);
 
     $title = "Update Entry";
-    include "../dbconnect.php";
-	include directoryCheck()."../header.php"; 
+    include "../db/dbconnect.php";
+	include "../header.php"; 
 
 
     $id = empty($_GET["id"]) ?null : $_GET["id"];
@@ -66,7 +66,7 @@
                     $sth = $db->prepare($sql);
                     $sth->execute($params);
                 
-                    header("Location: ".directoryCheck()."/Uren-klokker-2.0/index.php");
+                    header("Location: ".directoryCheck()."/job/Uren-klokker-2.0/index.php");
                 }
             ?>
         </div>

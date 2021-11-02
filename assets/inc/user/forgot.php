@@ -8,8 +8,9 @@
 
 
     $title = "Login";
-    require 'assets/inc/header.php';
-    require 'assets/inc/dbconnect.php';
+    require '../db/dbconnect.php';
+    require '../header.php';
+
 
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {

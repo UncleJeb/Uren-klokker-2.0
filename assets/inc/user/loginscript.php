@@ -83,7 +83,6 @@
 session_start();
 if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true ) 
 {
-    header("Location: index.php");
-    exit;
+    header("Location: ".directoryCheck()."/job/Uren-klokker-2.0/index.php");
 }
 ?>

@@ -19,4 +19,11 @@ $('.close').click(function () {
     $('.overlay').hide();
 })
 
+$('.project_button').click(function () {
+    $('.overlay_project').show();
+})
+$('.close').click(function () {
+    $('.overlay_project').hide();
+})
+
 var dataID = $('#button').data('data-id');

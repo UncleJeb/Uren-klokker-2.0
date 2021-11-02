@@ -1,6 +1,6 @@
 <?php
-$title = 'Create Entry';
 session_start();
+$title = 'Create Entry';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -9,9 +9,8 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
     if(isset($_SESSION['loggedIn']) && $_SESSION["loggedIn"] === false) {
         header("Location: login.php");
     }
-    include "../dbconnect.php";
-	include directoryCheck()."../header.php"; 
-
+    include "../db/dbconnect.php";
+	include "../header.php"; 
 
     $sql = "SELECT username FROM users";
     $sth = $db->prepare($sql);
@@ -48,13 +47,11 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
                 <div class="form-group">
                     <label for="">Beschrijving</label>
                     <textarea name="beschrijving" placeholder="schrijf hier wat je vandaag hebt gedaan.." class="form-input"  cols="30" rows="10"></textarea>
-                    <span class="error"><?php echo $beschrijvingErr ?></span>
                 </div>
                 <button type="submit" name="submit">Create</button><br>
-                <p class="form-text"><a class="form-links" href="<?php directoryCheck() ?>/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
+                <p class="form-text"><a class="form-links" href="/job/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
             </form>
-
-            <?php
+<?php
 
                 $username = $_POST["username"] ?? null;
                 $tijdbegin = $_POST["tijdbegin"] ?? null;
@@ -67,16 +64,17 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
                 
                 if(isset($_POST["submit"]))
                 {
+                            
                             $sql = "INSERT INTO uren (username, uren, datum, beschrijving) 
                             VALUES (:username, :uren, :datum, :beschrijving)";
                             $params = array(":username" => $username, ":uren" => $uren, ":datum" => $datum, ":beschrijving" => $beschrijving);
                             $sth = $db->prepare($sql);
                             $sth->execute($params);  
-                            header("Location: ".directoryCheck()."/Uren-klokker-2.0/index.php");
+                            
+                            header("Location: ".directoryCheck()."/job/Uren-klokker-2.0/index.php");
                 }
                 
-                
-            ?>
+?>
         </div>
     </div>
 </main>
