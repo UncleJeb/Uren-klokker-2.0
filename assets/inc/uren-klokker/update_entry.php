@@ -49,7 +49,7 @@
                     <input type="text" value="<?php echo $entry["beschrijving"]?>" name="beschrijving" class="form-input"> 
                 </div>
                 <button type="submit" name="submit">Update</button>
-               <p class="form-text"><a class="form-links" href="<?php directoryCheck() ?>/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
+               <p class="form-text"><a class="form-links" href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>
             </form>
             <?php 
                 if(isset($_POST["submit"])) {

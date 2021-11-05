@@ -46,7 +46,7 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
                 </div>
                 <div class="form-group">
                     <label for="">Beschrijving</label>
-                    <textarea name="beschrijving" placeholder="schrijf hier wat je vandaag hebt gedaan.." class="form-input"  cols="30" rows="10"></textarea>
+                    <textarea name="beschrijving" placeholder="schrijf hier wat je vandaag hebt gedaan.." class="form-input" id="create-textarea" maxlength="200"  cols="30" rows="10"></textarea>
                 </div>
                 <button type="submit" name="submit">Create</button><br>
                 <p class="form-text"><a class="form-links" href="/job/Uren-klokker-2.0/index.php"><i class='bx bx-arrow-back'></i> Back</a></p>

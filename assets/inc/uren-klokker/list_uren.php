@@ -19,7 +19,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="6"><a class="btn" href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/create_entry.php">Create</a></td>
+                        <td colspan="6"><a class="btn" href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/create_entry.php">Create</a></td>
                     </tr>
                 </tbody>
                 <thead>
@@ -54,8 +54,8 @@
                         <td><?php echo $row["uren"] ?></td>
                         <td><div class="text"><?php echo $row["beschrijving"] ?></div></td>
                         
-                        <td><a class="btn" href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/update_entry.php?id=<?php echo $row["id"]?>">Update</a></td>
-                        <td><a class="btn" onclick="return confirm('Are you sure you want to delete this item')" href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/delete_entry.php?id=<?php echo $row["id"]?>">Delete</butt></td>
+                        <td><a class="btn" href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/update_entry.php?id=<?php echo $row["id"]?>">Update</a></td>
+                        <td><a class="btn" onclick="return confirm('Are you sure you want to delete this item')" href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/delete_entry.php?id=<?php echo $row["id"]?>">Delete</butt></td>
                     </tr>
                     <?php } ?>
                 </tbody>

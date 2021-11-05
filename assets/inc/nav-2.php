@@ -14,7 +14,7 @@ session_start();
     $row = $pfp_stmt->fetch(PDO::FETCH_ASSOC);
 
     $image = $row['pfpname']; 
-    $image_src = directoryCheck()."/Uren-klokker-2.0/assets//upload/".$image;
+    $image_src =  directoryCheck()."/Uren-klokker-2.0/assets//upload/".$image;
 
 ?>
     <div class="sidebar">
@@ -34,40 +34,41 @@ session_start();
                 </a>
             </li>
             <li>
-                <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/index.php">
+                <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/index.php">
                     <i class='bx bxs-home' ></i>
                     <span class="links_name">Home</span>
                 </a>
                 <span class="sidebar_tooltip">Home</span>
             </li>
             <li>
-                <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/list_uren.php">
+                <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/uren-klokker/list_uren.php">
                     <i class='bx bxs-calendar'></i>
                     <span class="links_name">Uren</span>
                 </a>
                 <span class="sidebar_tooltip">Uren</span>
             </li>
             <li>
-                <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/charts/charts.php">
+                <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/charts/charts.php">
                     <i class="fas fa-chart-pie"></i>
                     <span class="links_name">Charts</span>
                 </a>
                 <span class="sidebar_tooltip">Charts</span>
             </li>
             <li>
-                <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/to-do-list/to-do.php">
+                <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/to-do-list/to-do.php">
                     <i class='bx bx-task'></i>
                     <span class="links_name">Tasks</span>
                 </a>
                 <span class="sidebar_tooltip">Tasks</span>
             </li>
             <li>
-                <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/projects/projects.php">
+                <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/projects/projects.php">
                     <i class="fas fa-code"></i>
                     <span class="links_name">Projects</span>
                 </a>
                 <span class="sidebar_tooltip">Projects</span>
             </li>
+            <!--
             <li>
                 <a href="">
                     <i class="fas fa-file-excel"></i>
@@ -82,6 +83,7 @@ session_start();
                 </a>
                 <span class="sidebar_tooltip">Editor</span>
             </li>
+            -->
             <li>
                 <a href="">
                     <i class="fas fa-cog"></i>
@@ -100,7 +102,7 @@ session_start();
                         <div class="job"><?php echo $_SESSION['occupation'] ?? null; ?></div>
                     </div>
                 </div>
-                <a href="<?php directoryCheck()?>/Uren-klokker-2.0/assets/inc/user/logout.php"><i id="logout" class="fas fa-power-off"></i></a>
+                <a href="<?php echo directoryCheck()?>/Uren-klokker-2.0/assets/inc/user/logout.php"><i id="logout" class="fas fa-power-off"></i></a>
             </div>
         </div>
     </div>

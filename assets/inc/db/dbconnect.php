@@ -1,7 +1,7 @@
 <?php 
 $ip = $_SERVER['REMOTE_ADDR'];
 $localip = '127.0.0.1';
-$officeIp = '192.168.1.122';
+$officeIp = '192.168.1.129';
 if($ip == $localip)
 {
     $host = "localhost";
@@ -9,7 +9,7 @@ if($ip == $localip)
     $username = "root";
     $password = "";
     
-} elseif($ip == $officeIp)
+} elseif($ip == $officeIp )
 {
     $host = "localhost:3307";
     $dbname = "job_werkurenv2";
@@ -27,7 +27,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 function directoryCheck() {
     $ip = $_SERVER['REMOTE_ADDR'];
     $localip = '127.0.0.1';
-    $officeIp = '192.168.1.122';
+    $officeIp = '192.168.1.129';
     
     if($ip == $localip) {
         $link = "";
@@ -35,6 +35,6 @@ function directoryCheck() {
     {
         $link = "/job";
     }
-    echo $link;
+    return $link;
 }
 ?>

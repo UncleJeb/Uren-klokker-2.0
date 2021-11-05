@@ -75,10 +75,10 @@
 
                         if(move_uploaded_file($_FILES['pfp_file']['tmp_name'], $target_dir.$name))
                         {
-                            
+                            /*
                             $sth = $db->prepare();
                             $sth->execute();  
-                            
+                            */
                         }
                     }
                 }

@@ -6,5 +6,5 @@
 
     $stmt = $db->prepare($sql);
     $stmt->execute($params);
-    header("Location: ".directoryCheck()."/job/Uren-klokker-2.0/index.php");
+    header("Location: ".directoryCheck()."/Uren-klokker-2.0/index.php");
 ?>

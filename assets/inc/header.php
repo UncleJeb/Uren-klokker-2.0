@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?php directoryCheck()?>/Uren-klokker-2.0/assets/css/style_new.css"> 
+    <link rel="stylesheet" href="<?php echo directoryCheck()?>/Uren-klokker-2.0/assets/css/style_new.css"> 
     <!-- JS -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/js/main.js" async></script>
+    <script src="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/js/main.js" async></script>
 
     <title><?php echo $title ?></title>
-    <link rel="shortcut icon" type="image/gif" href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/img/icons8-clock-24 (1).png" />
+    <link rel="shortcut icon" type="image/gif" href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/img/icons8-clock-24 (1).png" />
 </head>
 <body>

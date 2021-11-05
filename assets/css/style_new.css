@@ -760,8 +760,8 @@ input:-webkit-autofill
     content: '';
     position: absolute;
     inset: 4px;
-    background: #212121; /* 070c24 */
-    border-radius: 20px;
+    background: #212121;
+    border-radius: 16px;
 }
 
 
@@ -782,6 +782,7 @@ input:-webkit-autofill
 {
     margin-top: 15%;
 }
+
 
 
 label 
@@ -977,6 +978,11 @@ input:-internal-autofill-selected
     float: left;
     width: 50px !important;
     margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
 }
 
         /*
