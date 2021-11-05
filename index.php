@@ -45,6 +45,6 @@
         </div>
     </div>
 </main>
-<?php include 'assets/inc/footer.php'; ?>
+<?php include directoryCheck().'Uren-klokker/assets/inc/footer.php'; ?>
 
 

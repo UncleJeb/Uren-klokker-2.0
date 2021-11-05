@@ -71,7 +71,7 @@ setlocale(LC_ALL, 'nl_utf8', 'Dutch', 'nl_NL.UTF-8', 'Dutch_Netherlands.1252', '
                             $sth = $db->prepare($sql);
                             $sth->execute($params);  
                             
-                            header("Location: ".directoryCheck()."/job/Uren-klokker-2.0/index.php");
+                            header("Location: ".directoryCheck()."/Uren-klokker-2.0/index.php");
                 }
                 
 ?>

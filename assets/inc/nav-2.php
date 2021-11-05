@@ -14,7 +14,7 @@ session_start();
     $row = $pfp_stmt->fetch(PDO::FETCH_ASSOC);
 
     $image = $row['pfpname']; 
-    $image_src = "job/Uren-klokker-2.0/assets//upload/".$image;
+    $image_src = directoryCheck()."/Uren-klokker-2.0/assets//upload/".$image;
 
 ?>
     <div class="sidebar">

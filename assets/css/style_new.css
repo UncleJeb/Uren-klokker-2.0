@@ -574,6 +574,7 @@ input:-webkit-autofill
     pointer-events: none;
     white-space: nowrap;
     transition: all .5s ease;
+    padding: 0px 0px 0px 5px;
 }
 
 
@@ -591,6 +592,7 @@ input:-webkit-autofill
     width: 45px;
     object-fit: cover;
     border-radius: 12px;
+    margin-top: -8px;
 }
 
 
