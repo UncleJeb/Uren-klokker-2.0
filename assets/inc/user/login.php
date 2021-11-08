@@ -24,17 +24,18 @@
                     <input type="password" placeholder="<?php echo $passwordErr; ?>" name="password" id="password" class="form-input">
                 </div>
                 <div class="form-group" id="rememberme-container">
-                <label id="rememberme-label" for="">Remember Me</label>
+                    <!-- ?<label id="rememberme-label" for="">Remember Me</label> -->
                     <input type="checkbox" name="rememberme" id="rememberme">
+                    <label for="rememberme" class="custom_checkbox">Remember me</label>
                 </div>
                 <button type="submit">Login</button>
                 <span><?php echo $LoginErr?></span>
             </form>
             <div id="register-container">
-                <p id="register-text">Don't have an account? <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/user/register.php" id="register-link">Register here</a>.</p>
+                <p id="register-text">Don't have an account? <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/user/register.php" id="register-link">Register here</a>.</p>
             </div>
             <div id="forgot-container2">
-                <p id="forgot-text">Forgot your password? <a href="<?php directoryCheck() ?>/Uren-klokker-2.0/assets/inc/user/forgot.php" id="forgot-link">Click here</a>.</p>
+                <p id="forgot-text">Forgot your password? <a href="<?php echo directoryCheck() ?>/Uren-klokker-2.0/assets/inc/user/forgot.php" id="forgot-link">Click here</a>.</p>
             </div>
         </div>
     </div>

@@ -12,14 +12,11 @@
                 {
                     $_username = $_SESSION["username"];
                     $name = $_FILES['pfp_file']['name'];
-                    echo $name;
                     $target_dir= "assets/upload/";
                     $target_file = $target_dir . basename($_FILES["pfp_file"]["name"]);
 
-                    echo $target_file;
 
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-                    echo $imageFileType;
 
                     $extensions_arr = array("jpg","jpeg","png","gif");
 
